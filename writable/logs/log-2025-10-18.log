@@ -1,0 +1,1066 @@
+ERROR - 2025-10-18 07:54:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#7 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#13 {main}
+CRITICAL - 2025-10-18 07:54:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+ERROR - 2025-10-18 07:54:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'db_premix', 3306, '', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#7 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#13 {main}
+CRITICAL - 2025-10-18 07:54:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+ERROR - 2025-10-18 07:54:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'db_premix', 3306, '', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#7 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#13 {main}
+CRITICAL - 2025-10-18 07:54:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+ERROR - 2025-10-18 07:56:08 --> mysqli_sql_exception: Table 'db_premix.barang' doesn't exist in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#14 {main}
+CRITICAL - 2025-10-18 07:56:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.barang' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 07:56:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.barang' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 07:56:08 --> [Caused by] mysqli_sql_exception: Table 'db_premix.barang' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `barang`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barang`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barang`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barang`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 08:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:49:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 08:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-18 09:31:33 --> mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`...', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`...')
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`...')
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#10 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#15 {main}
+CRITICAL - 2025-10-18 09:31:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:31:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:31:33 --> [Caused by] mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+ERROR - 2025-10-18 09:32:31 --> mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`...', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`...')
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`...')
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#10 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#15 {main}
+CRITICAL - 2025-10-18 09:32:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:32:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:32:31 --> [Caused by] mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+ERROR - 2025-10-18 09:32:36 --> mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`...', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`...')
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`...')
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#10 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#15 {main}
+CRITICAL - 2025-10-18 09:32:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:32:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:32:36 --> [Caused by] mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+ERROR - 2025-10-18 09:32:58 --> mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`...', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`...')
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`...')
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Kampus\StockPremix\app\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+#7 C:\Kampus\StockPremix\app\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#10 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#15 {main}
+CRITICAL - 2025-10-18 09:32:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:32:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 09:32:58 --> [Caused by] mysqli_sql_exception: Table 'db_premix.transaksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = \'Premix\'
+AND DATE(transaksi.tanggal) = \'2025-10-18\'
+GROUP BY `produk`.`id_produk`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `produk`.`nama_produk`, `produk`.`stok` AS `stok_awal`, COALESCE(SUM(transaksi.stok_masuk), 0) AS masuk, COALESCE(SUM(transaksi.stok_keluar), 0) AS keluar, (produk.stok + COALESCE(SUM(transaksi.stok_masuk), 0) - COALESCE(SUM(transaksi.stok_keluar), 0)) AS stok_akhir
+FROM `transaksi`
+JOIN `produk` ON `produk`.`id_produk` = `transaksi`.`id_produk`
+JOIN `kategori_produk` ON `kategori_produk`.`id_kategori` = `produk`.`id_kategori`
+WHERE `kategori_produk`.`nama_kategori` = :kategori_produk.nama_kategori:
+AND DATE(transaksi.tanggal) = :DATE(transaksi.tanggal):
+GROUP BY `produk`.`id_produk`', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\TransaksiModel.php(22): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Dashboard.php(17): App\Models\TransaksiModel->getStokHarian('Premix', '2025-10-18')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 09:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:37:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 09:38:18 --> ErrorException: Undefined array key "harga"
+[Method: GET, Route: produk]
+in APPPATH\Views\Produk\index.php on line 38.
+ 1 APPPATH\Views\Produk\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "harga"', 'C:\\Kampus\\StockPremix\\app\\Views\\Produk\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Kampus\\StockPremix\\app\\Views\\Produk\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('produk/index', [], true)
+ 5 APPPATH\Controllers\Produk.php(16): view('produk/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 09:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 09:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 09:59:23 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\TransaksiModel::getStokHarian
+[Method: GET, Route: /]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Dashboard.php(17): CodeIgniter\Model->__call('getStokHarian', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 10:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:03:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-18 10:24:10 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Kampus\StockPremix\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pr...', 0)
+#1 C:\Kampus\StockPremix\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 C:\Kampus\StockPremix\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 C:\Kampus\StockPremix\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 C:\Kampus\StockPremix\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Kampus\StockPremix\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\Kampus\StockPremix\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Kampus\StockPremix\app\Controllers\Produk.php(41): CodeIgniter\Model->insert(Array)
+#8 C:\Kampus\StockPremix\system\CodeIgniter.php(933): App\Controllers\Produk->store()
+#9 C:\Kampus\StockPremix\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+#10 C:\Kampus\StockPremix\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Kampus\StockPremix\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\Kampus\StockPremix\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Kampus\StockPremix\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Kampus\StockPremix\system\rewrite.php(44): require_once('C:\\Kampus\\Stock...')
+#15 {main}
+CRITICAL - 2025-10-18 10:24:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: produk/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (:nama_produk:, :id_kategori:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Produk.php(41): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:24:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (\'Group 1\', \'1\', \'2025-10-18 10:24:10\', \'2025-10-18 10:24:10\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (\'Group 1\', \'1\', \'2025-10-18 10:24:10\', \'2025-10-18 10:24:10\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (:nama_produk:, :id_kategori:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Produk.php(41): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:24:10 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (\'Group 1\', \'1\', \'2025-10-18 10:24:10\', \'2025-10-18 10:24:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (\'Group 1\', \'1\', \'2025-10-18 10:24:10\', \'2025-10-18 10:24:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (\'Group 1\', \'1\', \'2025-10-18 10:24:10\', \'2025-10-18 10:24:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `produk` (`nama_produk`, `id_kategori`, `created_at`, `updated_at`) VALUES (:nama_produk:, :id_kategori:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Produk.php(41): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Produk->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Produk))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 10:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 10:26:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:28:23 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:28:57 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:29:04 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:29:07 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 10:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 10:30:33 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 10:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 10:31:31 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:33:25 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 10:33:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 10:36:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('3', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:40:22 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: POST, Route: transaksi/store]
+in APPPATH\Models\ProdukModel.php on line 15.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Kampus\\StockPremix\\app\\Models\\ProdukModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ProdukModel')
+ 3 APPPATH\Controllers\Transaksi.php(15): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ProdukModel')
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Transaksi->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:41:26 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: transaksi/store]
+in APPPATH\Controllers\Transaksi.php on line 49.
+ 1 APPPATH\Controllers\Transaksi.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Kampus\\StockPremix\\app\\Controllers\\Transaksi.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 10:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:41:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 10:41:55 --> ErrorException: Undefined array key "stok"
+[Method: POST, Route: transaksi/store]
+in APPPATH\Controllers\Transaksi.php on line 49.
+ 1 APPPATH\Controllers\Transaksi.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "stok"', 'C:\\Kampus\\StockPremix\\app\\Controllers\\Transaksi.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+CRITICAL - 2025-10-18 10:44:22 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: transaksi/store]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 APPPATH\Controllers\Transaksi.php(66): CodeIgniter\Model->update('1', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->store()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 10:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:52:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:52:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 10:54:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-18 11:24:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layouts/main.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/main.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layouts/main', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(26): view('dashboard/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Kampus\\StockPremix\\public\\index.php')
+DEBUG - 2025-10-18 11:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:27:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:34:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-18 11:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
