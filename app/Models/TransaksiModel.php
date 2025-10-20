@@ -20,15 +20,31 @@ class TransaksiModel extends Model
                     ->findAll();
     }
 
-    // 🔹 Ambil data stok harian untuk dashboard
-   public function getGrafikKeluarPerMinggu()
-{
-    return $this->select("WEEK(tanggal, 1) AS minggu, SUM(stok_keluar) AS total_keluar")
-                ->groupBy("minggu")
-                ->orderBy("minggu", "ASC")
-                ->limit(8)
-                ->findAll();
-}
+     public function getDataKeluar($kategori, $periode = 'week')
+    {
+        $builder = $this->db->table('transaksi t')
+            ->select('p.nama_produk, SUM(t.stok_keluar) as total_keluar')
+            ->join('produk p', 'p.id_produk = t.id_produk')
+            ->join('kategori_produk k', 'k.id_kategori = p.id_kategori')
+            ->where('k.nama_kategori', ucfirst($kategori));
+
+        // Filter berdasarkan waktu
+        if ($periode === 'month') {
+            $builder->where('t.tanggal >=', date('Y-m-d', strtotime('-30 days')));
+        } else {
+            $builder->where('t.tanggal >=', date('Y-m-d', strtotime('-7 days')));
+        }
+
+        $builder->groupBy('p.nama_produk');
+        $builder->orderBy('p.nama_produk', 'ASC');
+
+        $result = $builder->get()->getResultArray();
+
+        $labels = array_column($result, 'nama_produk');
+        $data = array_map('intval', array_column($result, 'total_keluar'));
+
+        return ['labels' => $labels, 'data' => $data];
+    }
 
 // Prediksi stok keluar minggu depan
 public function getPrediksiKeluar()
@@ -39,4 +55,43 @@ public function getPrediksiKeluar()
 
     return round($result['rata'] ?? 0);
 }
+
+public function getStokHarianByKategori($kategori)
+{
+    return $this->db->table('produk p')
+        ->select('p.nama_produk,
+                  IFNULL(SUM(CASE WHEN DATE(t.tanggal) = CURDATE() THEN t.stok_masuk ELSE 0 END), 0) AS `in`,
+                  IFNULL(SUM(CASE WHEN DATE(t.tanggal) = CURDATE() THEN t.stok_keluar ELSE 0 END), 0) AS `out`,
+                  IFNULL(p.stok, 0) AS stok_akhir')
+        ->join('kategori_produk k', 'k.id_kategori = p.id_kategori')
+        ->join('transaksi t', 't.id_produk = p.id_produk', 'left')
+        ->where('k.nama_kategori', $kategori)
+        ->groupBy('p.id_produk')
+        ->orderBy('p.nama_produk', 'ASC')
+        ->get()
+        ->getResultArray();
+}
+ public function getPrediksiMingguan()
+    {
+        return $this->db->table('transaksi t')
+            ->select('k.nama_kategori, p.nama_produk, ROUND(AVG(t.stok_keluar), 0) AS prediksi')
+            ->join('produk p', 'p.id_produk = t.id_produk')
+            ->join('kategori_produk k', 'k.id_kategori = p.id_kategori')
+            ->where('t.tanggal >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)')
+            ->groupBy('p.id_produk')
+            ->orderBy('k.nama_kategori', 'ASC')
+            ->get()
+            ->getResultArray();
+    }
+    public function getWeeklyChartData()
+{
+    return $this->db->table('transaksi t')
+        ->select('DATE(t.tanggal) as tanggal, SUM(t.stok_keluar) as total_keluar')
+        ->where('t.tanggal >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)')
+        ->groupBy('DATE(t.tanggal)')
+        ->orderBy('t.tanggal', 'ASC')
+        ->get()
+        ->getResultArray();
+}
+
 }

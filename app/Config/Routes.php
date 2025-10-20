@@ -9,6 +9,8 @@ use CodeIgniter\Router\RouteCollection;
 // Halaman utama langsung ke dashboard
 $routes->get('/', 'Dashboard::index');
 $routes->get('/dashboard/getChartData/(:any)/(:any)', 'Dashboard::getChartData/$1/$2');
+$routes->get('dashboard/grafikKeluar', 'Dashboard::grafikKeluar');
+
 
 
 $routes->get('produk', 'Produk::index');

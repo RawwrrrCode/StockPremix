@@ -41,33 +41,31 @@ class Transaksi extends BaseController
     public function store()
     {
         $id_produk = $this->request->getPost('id_produk');
-        $stok_masuk = (int) $this->request->getPost('stok_masuk');
-        $stok_keluar = (int) $this->request->getPost('stok_keluar');
-
-        // Ambil stok lama
-        $produk = $this->produkModel->find($id_produk);
-        $stok_lama = (int) $produk['stok'];
-
-        // Hitung stok baru
-        $stok_baru = $stok_lama + $stok_masuk - $stok_keluar;
-        if ($stok_baru < 0) {
-            return redirect()->back()->with('error', 'Stok tidak mencukupi untuk transaksi keluar!');
-        }
+        $stok_masuk = (int)$this->request->getPost('stok_masuk');
+        $stok_keluar = (int)$this->request->getPost('stok_keluar');
+        $tanggal = date('Y-m-d');
 
         // Simpan transaksi
         $this->transaksiModel->insert([
             'id_produk' => $id_produk,
             'stok_masuk' => $stok_masuk,
             'stok_keluar' => $stok_keluar,
-            'tanggal' => date('Y-m-d')
+            'tanggal' => $tanggal
         ]);
 
-        // Update stok produk
+        // Ambil stok lama
+        $produk = $this->produkModel->find($id_produk);
+        $stok_lama = $produk['stok'];
+
+        // Hitung stok baru
+        $stok_baru = $stok_lama + $stok_masuk - $stok_keluar;
+
+        // Update ke tabel produk
         $this->produkModel->update($id_produk, ['stok' => $stok_baru]);
 
-        return redirect()->to('/transaksi')->with('success', 'Transaksi berhasil disimpan.');
+        return redirect()->to('/transaksi')->with('success', 'Transaksi berhasil disimpan & stok diperbarui.');
     }
-
+    
     // ✅ Hapus transaksi (opsional)
     public function delete($id)
     {

@@ -3,40 +3,52 @@
 namespace App\Controllers;
 use App\Models\DashboardModel;
 use App\Models\TransaksiModel;
+use App\Models\ProdukModel;
 
 class Dashboard extends BaseController
 {
     protected $dashboardModel;
     protected $transaksiModel;
+    protected $produkModel;
 
     public function __construct()
     {
         $this->dashboardModel = new DashboardModel();
         $this->transaksiModel = new TransaksiModel();
+        $this->produkModel = new ProdukModel();
     }
 
-    public function index()
+      public function index()
     {
-        $kategori = $this->request->getGet('kategori') ?? 'Premix';
+        $kategori = $this->request->getGet('kategori') ?? 'Premix'; // default kategori
+        $produk   = $this->transaksiModel->getStokHarianByKategori($kategori);
+        $forecast = $this->transaksiModel->getPrediksiMingguan();
+        $chartData = $this->transaksiModel->getWeeklyChartData();
 
-        // Ambil data stok
-        $produk = $this->dashboardModel->getStokByKategori($kategori);
+        // Hitung rata-rata prediksi (untuk angka besar di tengah dashboard)
+        $avgPrediksi = 0;
+        if (!empty($forecast)) {
+            $total = array_sum(array_column($forecast, 'prediksi'));
+            $avgPrediksi = round($total / count($forecast));
+        }
 
-        // Grafik stok keluar mingguan
-        $grafikData = $this->transaksiModel->getGrafikKeluarPerMinggu();
-
-        // Prediksi: rata-rata stok keluar 7 hari terakhir
-        $prediksi = $this->transaksiModel->getPrediksiKeluar();
-
-        $data = [
-            'title' => 'Dashboard Stok Harian',
+        return view('dashboard/index', [
             'kategori' => $kategori,
-            'produk' => $produk,
-            'tanggal' => date('d/m/Y'),
-            'grafik' => $grafikData,
-            'prediksi' => $prediksi
-        ];
-
-        return view('dashboard/index', $data);
+            'produk'   => $produk,
+            'forecast' => $forecast,
+            'chartData' => $chartData,
+            'prediksi' => $avgPrediksi, // ✅ kirim ke view
+            'tanggal'  => date('Y-m-d')
+        ]);
     }
+     public function grafikKeluar()
+    {
+        $transaksiModel = new TransaksiModel();
+        $kategori = $this->request->getGet('kategori') ?? 'Premix';
+        $periode  = $this->request->getGet('periode') ?? 'week';
+
+        $data = $transaksiModel->getDataKeluar($kategori, $periode);
+        return $this->response->setJSON($data);
+    }
+
 }
